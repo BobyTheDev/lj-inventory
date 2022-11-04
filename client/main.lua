@@ -57,6 +57,10 @@ RegisterNetEvent("lj-inventory:client:showBlur", function()
     showBlur = not showBlur
 end)
 
+if IsEntityDead(PlayerPedId()) then
+    SetCurrentPedWeapon(ped, `WEAPON_UNARMED`, true) 
+end 
+
 -- Functions
 
 local function GetClosestVending()
